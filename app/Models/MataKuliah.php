@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Matakuliah extends Model
+class MataKuliah extends Model
 {
     use HasFactory;
 
     protected $table = 'mata_kuliah';
-    protected $guarded = ['id'];
 
+    protected $fillable = [
+        'nama_mk',
+        'sks',
+    ];
+
+    // DB pakai UUID
     public $incrementing = false;
     protected $keyType = 'string';
 
